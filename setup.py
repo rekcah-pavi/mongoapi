@@ -7,7 +7,7 @@ def get_long_description():
 
 setup(
     name="mongoapi",
-    version="1.0.0",
+    version="1.0.2",
     author="Paviththanan",
     author_email="rkpavi06@gmail.com",
     description="A Python package for simplifying MongoDB operations with built-in support for TTL and CRUD functionality.",
