@@ -1,3 +1,23 @@
+Metadata-Version: 2.1
+Name: mongoapi
+Version: 1.0.0
+Summary: A Python package for simplifying MongoDB operations with built-in support for TTL and CRUD functionality.
+Home-page: https://github.com/rekcah-pavi/mongoapi
+Author: Paviththanan
+Author-email: rkpavi06@gmail.com
+Keywords: Python,MongoDB,API,Database Management,TTL,CRUD Operations,pymongo
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymongo
+
 
 # MongoAPI
 
@@ -35,12 +55,15 @@ pip install git+https://github.com/rekcah-pavi/mongoapi
 ### Initialize the API
 
 ```python
-from mongoapi import mongoapi,mongodb_url
+from mongoapi import mongoapi
 
-url = mongodb_url("username","pass","dbname","host") #port=27017
 # Initialize the MongoAPI
-api = mongoapi(url,"mydb")
-
+api = mongoapi(
+    uname="username",
+    pw="password",
+    dbname="mydatabase",
+    name="mycollection"
+)
 ```
 
 ### Insert or Update a Document
